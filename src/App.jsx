@@ -1,17 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from "react";
 
-import './App.css'
+import "./App.css";
+import { fetchdatafromapi } from "./utils/api";
 
 function App() {
- 
+  useEffect(() => {
+    apitesting();
+  }, []);
+  const apitesting = () => {
+    fetchdatafromapi("/movie/popular").then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <>
-      <div>
-        app
-      </div>
-        
+      <div className="app">app</div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
