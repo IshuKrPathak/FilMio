@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { fetchdatafromapi } from "./utils/api";
 
@@ -11,7 +11,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home/Home";
 import Details from "./pages/details/Details";
-import searchResult from "./pages/searchResult/searchResult";
+import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import Pagenotfound from "./pages/404/Pagenotfound";
 
@@ -20,10 +20,10 @@ function App() {
   const { url } = useSelector((state) => state.home);
   console.log(url);
   useEffect(() => {
-    apitesting();
+    fetchapiconfig();
   }, []);
-  const apitesting = () => {
-    fetchdatafromapi("/movie/popular").then((res) => {
+  const fetchapiconfig = () => {
+    fetchdatafromapi("/configuration").then((res) => {
       console.log(res);
       dispatch(getapiconfiguration(res));
     });
@@ -31,14 +31,16 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route>
-        
-      </Route>
-    </Routes>
-    
+      {/* <Header/> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:mediaType/:id" element={<Details />} />
+        <Route path="/search/:query" element={<SearchResult />} />
+        <Route path="/explore/:mediaType/:id" element={<Explore />} />
+        <Route path="*" element={<Pagenotfound />} />
+      </Routes>
+      {/* <Footer/> */}
     </BrowserRouter>
-   
   );
 }
 
