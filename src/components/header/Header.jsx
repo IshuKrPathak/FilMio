@@ -17,9 +17,18 @@ const Header = () => {
     const [showSearch, setShowSearch] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
+      const openSearch = () => {
+        setMobileMenu(false)
+        setShowSearch(true)
+
+      }
+      const openMobileMenu = () =>{
+        setMobileMenu(true)
+        setShowSearch(false)
+      }
 
     return (
-     <header className="header">
+     <header className={`header ${mobileMenu ? "mobileView":""}`}>
         <ContentWrapper>
           <div className="logo">
             <img src={logo} alt="" />
@@ -34,11 +43,11 @@ const Header = () => {
           <div className="mobile-menu-items">
             <HiOutlineSearch/>
             {mobileMenu ? (
-              <VscChromeClose/>
+              <VscChromeClose onClick={()=>setMobileMenu(false)}/>
               // when is is on mobile view
 
             ) : (
-              <SlMenu/>
+              <SlMenu onClick={openMobileMenu}/>
               // when it is on desktop menu(hamburger menu)
             )}
            

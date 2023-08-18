@@ -10,14 +10,17 @@
     align-items: center;
     transition: all ease 0.5s;
     z-index: 2;
+
     &.top {
         background: rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
     }
+
     &.show {
         background-color: var(--black3);
     }
+
     &.hide {
         transform: translateY(-60px);
     }
@@ -27,19 +30,24 @@
         align-items: center;
         justify-content: space-between;
     }
+
     .logo {
         cursor: pointer;
+
         img {
             height: 100px;
         }
     }
+
     .menu-items {
         list-style-type: none;
         display: none;
         align-items: center;
+
         @include md {
             display: flex;
         }
+
         .menu-item {
             height: 60px;
             display: flex;
@@ -48,16 +56,20 @@
             color: white;
             font-weight: 500;
             position: relative;
+
             &.searchIcon {
                 margin-right: 0;
             }
+
             svg {
                 font-size: 18px;
             }
+
             cursor: pointer;
+
             &:hover {
                 color: var(--blue);
-               
+
 
             }
         }
@@ -66,18 +78,22 @@
     .mobile-menu-items {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 2px;
+
         @include md {
             display: none;
         }
+
         svg {
-            font-size: 18px;
+            margin: 0 23px;
+            font-size: 28px;
             color: white;
         }
     }
 
     &.mobileView {
         background: var(--black3);
+
         .menu-items {
             display: flex;
             position: absolute;
@@ -89,6 +105,7 @@
             padding: 20px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             animation: mobileMenu 0.3s ease forwards;
+
             .menu-item {
                 font-size: 20px;
                 width: 100%;
@@ -98,6 +115,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+
                 &:last-child {
                     display: none;
                 }
@@ -112,18 +130,21 @@
         position: absolute;
         top: 60px;
         animation: mobileMenu 0.3s ease forwards;
+
         .searchInput {
             display: flex;
             align-items: center;
             height: 40px;
             margin-top: 10px;
             width: 100%;
+
             svg {
                 font-size: 20px;
                 flex-shrink: 0;
                 margin-left: 10px;
                 cursor: pointer;
             }
+
             input {
                 width: 100%;
                 height: 50px;
@@ -133,6 +154,7 @@
                 border-radius: 30px 0 0 30px;
                 padding: 0 15px;
                 font-size: 14px;
+
                 @include md {
                     height: 60px;
                     font-size: 20px;
@@ -147,6 +169,7 @@
     0% {
         transform: translateY(-130%);
     }
+
     100% {
         transform: translateY(0);
     }
