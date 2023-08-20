@@ -17,10 +17,11 @@ const Header = () => {
     const [showSearch, setShowSearch] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
+    // useEffect(()=>{
+    //     Window.scrollTo(0,0);
+    // },[location])
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
+
 
     const controlNavbar = () => {
         if (window.scrollY > 200) {
@@ -29,7 +30,9 @@ const Header = () => {
             } else {
                 setShow("show");
             }
-        } else {
+
+        }
+        else {
             setShow("top");
         }
         setLastScrollY(window.scrollY);
@@ -60,15 +63,18 @@ const Header = () => {
         setMobileMenu(true);
         setShowSearch(false);
     };
-
     const navigationHandler = (type) => {
         if (type === "movie") {
             navigate("/explore/movie");
-        } else {
+
+        }
+        else {
             navigate("/explore/tv");
         }
         setMobileMenu(false);
-    };
+
+    }
+
 
     return (
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
