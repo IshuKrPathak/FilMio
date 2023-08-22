@@ -37,7 +37,7 @@ FilMio is a cutting-edge online platform that delivers an unparalleled movie-wat
 
 ### Tech Stack <a name="tech-stack"></a>
 
-The Tech stack for this project include Vite + React ,Fast API , SCSS , Redux , Custom Hooks and The Movie Database.
+The Tech stack for this project include Vite + React ,Rapid API , SCSS , Redux , Custom Hooks and The Movie Database.
 <!--
 <details>
   <summary>Client</summary>
