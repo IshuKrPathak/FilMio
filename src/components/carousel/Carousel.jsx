@@ -19,7 +19,17 @@ const Carousel = ({ data, loading, endpoint, title }) => {
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
 
-  const navigation = (dir) => {};
+  const navigation = (dir) => {
+const container = carouselContainer.current;
+
+  
+  const scrollAmount = dir === "left" ? container.scrollLeft - (container.offsetWidth + 20):container.scrollLeft + (container.offsetWidth + 20);
+  container.scrollTo({
+    left:scrollAmount,
+    behavior:"smooth"
+
+  })
+};
   const SkItem = ()=>{
     return (
       <div className="skeletonItem">
@@ -55,14 +65,14 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                 <div
                   key={item.id}
                   className="carouselItem"
-                  // onClick={() =>
-                  //   navigate(`/${item.media_type || endpoint}/${item.id}`)
-                  // }
+                  onClick={() =>
+                    navigate(`/${item.media_type || endpoint}/${item.id}`)
+                  }
                 >
                   <div className="posterBlock">
                     <Img src={posterUrl} />
                     <CircleRating rating={item.vote_average.toFixed(1)}/>
-                    <Genres data={item.genre_ids}/>
+                    <Genres data={item.genre_ids.slice(0,2)}/>
                   </div>
                   <div className="textBlock">
                     <span className="title">
