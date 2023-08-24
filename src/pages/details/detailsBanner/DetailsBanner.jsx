@@ -17,7 +17,7 @@ const DetailsBanner = ({ video, crew }) => {
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
   const { url } = useSelector((state) => state.home);
 
-  const _genres = data?.genres?.map((g)=>g.id)
+  const _genres = data?.genres?.map((g) => g.id);
 
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
@@ -44,32 +44,55 @@ const DetailsBanner = ({ video, crew }) => {
                         src={url.backdrop + data.poster_path}
                       />
                     ) : (
-                      <Img
-                        className="posterImg"
-                        src={PosterFallback}
-                      />
+                      <Img className="posterImg" src={PosterFallback} />
                     )}
                   </div>
                   <div className="right">
                     <div className="title">
-                        {`${data.name || data.title} (${dayjs(data?.release_date).format("YYYY")})`}
+                      {`${data.name || data.title} (${dayjs(
+                        data?.release_date
+                      ).format("YYYY")})`}
                     </div>
-                    <div className="subtitle">
-                        {data.tagline}
-                    </div>
-                    <Genres data={_genres
-                    }/>
+                    <div className="subtitle">{data.tagline}</div>
+                    <Genres data={_genres} />
 
                     <div className="row">
-                        <CircleRating rating={data.vote_average.toFixed(
+                      <CircleRating rating={data.vote_average.toFixed()} />
+                      <div className="playbtn" onClick={() => {}}>
+                        <PlayIcon />
+                        <span className="text">Watch Trailer</span>
+                      </div>
+                    </div>
 
-                        )}/>
-                        <div className="playbtn" onClick={()=>{}}>
-                            <PlayIcon/>
-                            <span className="text">
-                                Watch Trailer
-                            </span>
+                    <div className="overview">
+                      <div className="heading">Overview</div>
+                      <div className="description">{data.overview}</div>
+                    </div>
+                    <div className="info">
+                      {data.status && (
+                        <div className="infoItem">
+                          <span className="text bold">Status: </span>
+                          <span className="text">{data.status}</span>
                         </div>
+                      )}
+
+                      {data.release_date && (
+                        <div className="infoItem">
+                          <span className="text bold">Release Date: </span>
+                          <span className="text">
+                            {dayjs(data.release_date).format("MMM D, YYYY")}
+                          </span>
+                        </div>
+                      )}
+
+                      {data.runtime && (
+                        <div className="infoItem">
+                          <span className="text bold">Run Time: </span>
+                          <span className="text">
+                            {toHoursAndMinutes(data.runtime)}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
