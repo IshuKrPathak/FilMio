@@ -83,7 +83,7 @@
                 }
             }
             .genres {
-                margin-bottom: 25px;
+                margin-bottom: 5px;
                 flex-flow: row wrap;
             }
             .overview {
@@ -139,17 +139,17 @@
                 }
                 &:hover {
                     .text {
-                        color: var(--pink);
+                        color: rgb(11, 213, 231);
                     }
                     .triangle {
                         stroke-dashoffset: 0;
                         opacity: 1;
-                        stroke: var(--pink);
+                        stroke: rgb(11, 213, 231);;
                         animation: trailorPlay 0.7s ease-in-out;
                     }
                     .circle {
                         stroke-dashoffset: 0;
-                        stroke: var(--pink);
+                        stroke: rgb(11, 213, 231);;
                     }
                 }
             }
