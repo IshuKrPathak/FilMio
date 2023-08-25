@@ -1,18 +1,31 @@
 <a name="readme-top"></a>
-
-
-
 <div align="center">
   
-  <img src="![FilMio-logo](https://github.com/Ishukumarpathak/FilMio/assets/77011944/7339088d-478e-4c2c-b67a-7626d452920e)
-o-logo.png" alt="logo" width="140"  height="auto" />
+![FilMio-logo](https://github.com/Ishukumarpathak/FilMio/assets/77011944/6bb5edbb-a73a-4238-b3c8-d425af0797ea)
   <br/>
-
   <h3><b> FilMio </b></h3>
-
 </div>
 
+#📸 Snaps of FilMio
+ ![Screenshot 2023-08-25 143523](https://github.com/Ishukumarpathak/FilMio/assets/77011944/d9170c81-9ebd-4f40-8a10-d50fcd814293)
+
+
+
+
+
+![Screenshot 2023-08-25 143625](https://github.com/Ishukumarpathak/FilMio/assets/77011944/a6396491-2920-4c8e-aa0e-aeb534e0057c)
+
+![Screenshot 2023-08-25 143651](https://github.com/Ishukumarpathak/FilMio/assets/77011944/52454f59-2eae-4093-9c77-a683b1ac4fbd)
+
+![Screenshot 2023-08-25 143712](https://github.com/Ishukumarpathak/FilMio/assets/77011944/44b6bea8-826a-4e0d-858c-1847d1c81a4d)
+
+![Screenshot 2023-08-25 143736](https://github.com/Ishukumarpathak/FilMio/assets/77011944/8dc0c1ab-8e6e-4e65-b5f6-4bfda81d390b)
+
+
+
+
 <!-- TABLE OF CONTENTS -->
+
 
 # 📗 Table of Contents
 
