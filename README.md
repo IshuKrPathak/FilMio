@@ -4,7 +4,8 @@
 
 <div align="center">
   
-  <img src="FilMio-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="FilMi![FilMio-logo](https://github.com/Ishukumarpathak/FilMio/assets/77011944/7339088d-478e-4c2c-b67a-7626d452920e)
+o-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b> FilMio </b></h3>
