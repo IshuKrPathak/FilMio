@@ -5,6 +5,8 @@ import useFetch from "../../hooks/useFetch";
 import DetailsBanner from "./detailsBanner/DetailsBanner";
 import Cast from "./cast/Cast";
 import VideosSection from "./detailsBanner/videoSection/VideoSection";
+import Similar from "./caroussels/Similiar";
+import Recommendation from "./caroussels/Recomendations";
 const Details = () => {
 
 
@@ -18,6 +20,9 @@ const { data:credits, loading:creditsLoading } = useFetch(`/${mediaType}/${id}/c
     <Cast data={credits?.cast} loading={creditsLoading} />
     <VideosSection data={data} loading={loading
     }/>
+    <Similar mediaType={mediaType
+    } id={id}/>
+    <Recommendation mediaType={mediaType} id={id}/>
   </div>;
 };
 

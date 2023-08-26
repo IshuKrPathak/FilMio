@@ -46,7 +46,8 @@ const container = carouselContainer.current;
   return (
     <div className="carousel">
       <ContentWrapper>
-        <div className="carouselTitle"></div>
+        {title && <div className="carouselTitle">{title}</div>}
+        {/* <div className="carouselTitle"></div> */}
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
