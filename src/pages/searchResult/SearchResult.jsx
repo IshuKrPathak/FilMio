@@ -5,7 +5,7 @@ import { fetchdatafromapi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper.jsx";
 import Spinner from "../../components/spinner/Spinner";
 
-import "./searchResult.scss";
+import "./SearchResult.scss";
 
 const searchResult = () => {
   const [data, setData] = useState(null);
