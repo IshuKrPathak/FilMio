@@ -154,17 +154,16 @@ Install this project with:
   cd my-project
 ```
 
-<!--
+
 ### Usage
 
 To run the project, execute the following command:
-<!--
-Example command:
+
 
 ```sh
  npm run dev
 ```
---->
+<!---
 
 <!--### Run tests
 
@@ -187,7 +186,7 @@ Example:
 ```sh
 
 ```
- -->->
+ -->
 
 
 
