@@ -6,8 +6,7 @@ import "./HeroBanner.scss";
 import useFetch from "../../../hooks/useFetch";
 
 import Img from "../../../components/lazyLoadImage/Img";
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper.jsx";
-
+import ContentWrapper from "../../../components/contentWrapper/contentWrapper";
 const HeroBanner = () => {
     const [background, setBackground] = useState("");
     const [query, setQuery] = useState("");
