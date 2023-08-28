@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import "./Cast.scss";
 
-import ContentWrapper from "../../../components/contentWrapper/contentWrapper";
+import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import Img from "../../../components/lazyLoadImage/Img";
 import avatar from "../../../assets/avatar.png";
 
