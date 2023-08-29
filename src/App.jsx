@@ -11,7 +11,7 @@ import Home from "./pages/Home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
 import SearchResult from "./pages/searchResult/SearchResult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
-import PageNotFound from "./pages/404/Pagenotfound.jsx";
+import PageNotFound from "./pages/404/Pagenotfound";
 
 function App() {
     const dispatch = useDispatch();
